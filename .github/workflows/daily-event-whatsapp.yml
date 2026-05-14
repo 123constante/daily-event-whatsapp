@@ -13,7 +13,7 @@ jobs:
       - name: Trigger Edge Function
         run: |
           curl -X POST \
-            https://stdactfauprzddbmzg.supabase.co/functions/v1/send_daily_whatsapp \
+            https://stsdtacfauprzrdebmzg.supabase.co/functions/v1/send_daily_whatsapp \
             -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{
