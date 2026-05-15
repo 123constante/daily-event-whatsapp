@@ -1,4 +1,4 @@
-name: Daily Event WhatsApp
+hname: Daily Event WhatsApp
 
 on:
   schedule:
@@ -13,8 +13,7 @@ jobs:
       - name: Trigger Edge Function
         run: |
           curl -X POST \
-            https://stsdtacfauprzrdebmzg.supabase.co/functions/v1/send_daily_whatsapp \
-            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
+    https://stsdtacfauprzrdebmzg.supabase.co/functions/v1/send_daily_whatsapp \            -H "Authorization: Bearer ${{ secrets.SUPABASE_ANON_KEY }}" \
             -H "Content-Type: application/json" \
             -d '{
               "whatsapp_token": "${{ secrets.WHATSAPP_ACCESS_TOKEN }}",
